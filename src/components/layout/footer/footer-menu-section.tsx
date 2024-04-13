@@ -20,8 +20,8 @@ const FOOTER_MENUS = [
 const FooterMenu: FC = () => {
   const router = useRouter();
   return (
-    <div className="flex flex-col w-full items-center justify-center gap-10">
-      <div className="w-8/12 h-[2px] bg-[#E5E5E5] rounded-md" />
+    <div className="flex flex-col w-full items-center justify-center gap-10 max-w-[1024px]">
+      <div className="w-9/12 h-[2px] bg-[#E5E5E5] rounded-md" />
       <div className="flex flex-row flex-wrap gap-4 items-center justify-center max-w-[672px]">
         {FOOTER_MENUS.map((menu) => (
           <span
