@@ -10,7 +10,7 @@ type FooterMenu = {
 
 const FOOTER_MENUS = [
   { label: 'Tentang Kami', url: '/about-us' },
-  { label: 'Karir', url: '/career' },
+  { label: 'Karir', url: '#' },
   { label: 'FAQ', url: '/faq' },
   { label: 'Hubungi Kami', url: '/contact-us' },
   { label: 'Syarat & Ketentuan', url: '/terms-and-conditions' },

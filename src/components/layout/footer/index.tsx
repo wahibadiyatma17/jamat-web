@@ -5,7 +5,10 @@ import FooterDownloadAppSection from './footer-download-app-section';
 
 const Footer: FC = () => {
   return (
-    <div className=" bg-[#406EDD] flex flex-col items-center justify-center gap-[80px] p-10">
+    <div
+      className=" bg-[#406EDD] flex flex-col items-center justify-center gap-[80px] p-10"
+      id="download-apps"
+    >
       <FooterDownloadAppSection />
       <FooterMenu />
     </div>

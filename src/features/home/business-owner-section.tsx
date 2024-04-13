@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const BusinessOwnerSection: FC = () => {
   return (
-    <div className="w-full h-full px-4 md:px-10 ">
+    <div className="w-full h-full px-4 md:px-10 " id="business-owner">
       <div className="bg-[#B8BA3F] rounded-3xl w-full px-5 md:px-10 py-10 md:py-[80px] flex flex-col gap-8 text-[#FEFFD2]">
         <h4 className="text-center text-[#FEFFD2] font-[900] text-3xl">Kamu Pemilik Usaha?</h4>
         <div className="flex flex-row gap-6 justify-between">
