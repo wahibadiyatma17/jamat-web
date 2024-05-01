@@ -18,7 +18,7 @@ const Navbar: FC = () => {
         <IoChevronDownOutline style={{ width: 20, height: 20, marginTop: 4 }} />
       </div>
 
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-row items-center justify-between flex-wrap gap-4">
         <div
           className="h-[58px] md:h-[116px] w-[166px] md:w-[332px] relative cursor-pointer"
           onClick={() => router.push('/')}

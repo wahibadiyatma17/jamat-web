@@ -1,3 +1,5 @@
+import Providers from '@/providers/clientProvider';
+import { ConfigProvider } from 'antd';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -24,7 +26,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <ConfigProvider>
+        <body className={inter.className}>
+          <Providers>{children}</Providers>
+        </body>
+      </ConfigProvider>
     </html>
   );
 }

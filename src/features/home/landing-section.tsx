@@ -1,9 +1,14 @@
+'use client';
+
 import Image from 'next/image';
-import React, { FC } from 'react';
+import React, { FC, useMemo } from 'react';
+import { useWindowSize } from 'usehooks-ts';
 
 const LandingSection: FC = () => {
+  const width = useWindowSize().width;
+
   return (
-    <div className="w-full h-full px-4 md:px-10 flex flex-col gap-10 items-start justify-start">
+    <div className="w-full h-full px-4 md:px-10 flex flex-col gap-[120px] md:gap-10 items-start justify-start">
       <div className="self-start max-w-[380px] ml-10">
         <span className="text-[#5E5E5E] text-3xl font-bold">
           <span className="text-[#FF940D]">Jago Hemat</span> Belanja Makanan dan Kebutuhan
@@ -17,7 +22,8 @@ const LandingSection: FC = () => {
           Temukan toko-toko terdekat yang menawarkan paket makanan dan kebutuhan harian dengan harga
           terjangkau
         </p>
-        <div className="absolute right-0 bottom-0 w-[408px] h-[600px]">
+
+        <div className="absolute right-0 bottom-0 w-[320px] md:w-[408px] h-[480px] md:h-[600px] hidden md:block">
           <Image src={'/landing-hero.png'} alt="landing hero" fill />
         </div>
       </div>
