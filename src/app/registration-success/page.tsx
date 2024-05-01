@@ -1,7 +1,7 @@
 'use client';
 
-import StoreRegistration from '@/features/store-registration';
-import { useState, useEffect } from 'react';
+import RegistrationSuccess from '@/features/registration-success';
+import { useEffect, useState } from 'react';
 
 export default function StoreRegistrationPage() {
   const [isWindowReady, setIsWindowReady] = useState(false);
@@ -10,5 +10,5 @@ export default function StoreRegistrationPage() {
     if (typeof window !== undefined) setIsWindowReady(true);
   }, []);
 
-  return isWindowReady ? <StoreRegistration /> : <></>;
+  return isWindowReady ? <RegistrationSuccess /> : <></>;
 }

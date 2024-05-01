@@ -3,6 +3,7 @@
 import { userHooks } from '@/apis/user.api';
 import AppLayout from '@/components/layout';
 import { UserRegistration } from '@/schemas/user.schema';
+import { useUserStore } from '@/stores/user.store';
 import { EyeTwoTone, LockOutlined, MailOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Input, Spin } from 'antd';
 import { useRouter } from 'next/navigation';
@@ -19,8 +20,9 @@ const AccountRegistration: FC = () => {
     formState: { isValid },
   } = form;
   const router = useRouter();
-
+  const store = useUserStore();
   const register = userHooks.useRegisterUser();
+  const login = userHooks.useLogin();
 
   const onSubmitPress = handleSubmit(
     React.useCallback(
@@ -31,16 +33,24 @@ const AccountRegistration: FC = () => {
 
         register.mutateAsync(payload, {
           onSuccess: () => {
-            toast.success('Pendaftaran Akun Berhasil');
-            router.push('/store-registration');
+            const loginPayload = {
+              email: values.email,
+              password: values.password,
+            };
+            login.mutate(loginPayload, {
+              onSuccess: (res) => {
+                store.setUser(res.user);
+                toast.success('Pendaftaran Akun Berhasil');
+                router.push('/store-registration');
+              },
+            });
           },
           onError: () => {
             toast.error('Pendaftaran Akun Gagal');
-            router.push('/store-registration');
           },
         });
       },
-      [form, register],
+      [form, register, login, store],
     ),
   );
 
@@ -117,7 +127,7 @@ const AccountRegistration: FC = () => {
             className="cursor-pointer border-none py-2.5 px-5 rounded-3xl md:min-h-[48px] md:min-w-[144px] flex items-center justify-center bg-[#FF940D] hover:bg-[#DD800C] hover:scale-105 transition-all text-[#FEFFD2] font-bold text-xl"
             onClick={onSubmitPress}
             style={{ background: '#FF940D', color: '#FEFFD2' }}
-            loading={register.isLoading}
+            loading={register.isLoading || login.isLoading}
           >
             Lanjut
           </Button>
