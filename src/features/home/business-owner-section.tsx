@@ -12,9 +12,9 @@ const BusinessOwnerSection: FC = () => {
         <h4 className="text-center text-[#FEFFD2] font-[900] text-3xl">Kamu Pemilik Usaha?</h4>
         <div className="flex flex-row gap-6 justify-between">
           <div className="flex flex-col gap-6">
-            <div className="relative w-[252px] h-[480px] border-[5px] border-white rounded-[32px]">
+            <div className="relative w-[280px] h-[560px] border-[4px] border-white rounded-[32px]">
               <Image
-                src={'/placeholder-phone.png'}
+                src={'/section-3-1.png'}
                 alt="placeholder phone"
                 fill
                 objectFit="cover"
@@ -26,9 +26,9 @@ const BusinessOwnerSection: FC = () => {
             </span>
           </div>
           <div className="flex flex-col gap-6">
-            <div className="relative w-[252px] h-[480px] border-[5px] border-white rounded-[32px]">
+            <div className="relative w-[280px] h-[560px] border-[4px] border-white rounded-[32px]">
               <Image
-                src={'/placeholder-phone.png'}
+                src={'/section-3-2.png'}
                 alt="placeholder phone"
                 fill
                 objectFit="cover"
@@ -40,9 +40,9 @@ const BusinessOwnerSection: FC = () => {
             </span>
           </div>
           <div className="flex flex-col gap-6">
-            <div className="relative w-[252px] h-[480px] border-[5px] border-white rounded-[32px]">
+            <div className="relative w-[280px] h-[560px] border-[4px] border-white rounded-[32px]">
               <Image
-                src={'/placeholder-phone.png'}
+                src={'/section-3-3.png'}
                 alt="placeholder phone"
                 fill
                 objectFit="cover"
