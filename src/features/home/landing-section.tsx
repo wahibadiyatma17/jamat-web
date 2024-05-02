@@ -24,7 +24,7 @@ const LandingSection: FC = () => {
         </p>
 
         <div className="absolute right-0 bottom-0 w-[320px] md:w-[408px] h-[480px] md:h-[600px] hidden md:block">
-          <Image src={'/landing-hero.png'} alt="landing hero" fill />
+          <Image src={'/landing-main.png'} alt="landing hero" fill />
         </div>
       </div>
     </div>

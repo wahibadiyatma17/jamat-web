@@ -31,7 +31,7 @@ const Navbar: FC = () => {
             className="cursor-pointer py-2.5 px-5 rounded-3xl flex items-center justify-center bg-[#FF940D] hover:bg-[#DD800C] hover:scale-105 transition-all text-[#FEFFD2]"
             onClick={() => scrollToSection('business-owner')}
           >
-            <span>Kamu Pemilik Bisnis</span>
+            <span>Kamu Pemilik Usaha?</span>
           </div>
           <div
             className="cursor-pointer py-2.5 px-5 rounded-3xl flex items-center justify-center bg-[#BBBE17] hover:bg-[#959814] hover:scale-105 transition-all text-[#FEFFD2]"
